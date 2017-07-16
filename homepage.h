@@ -4,6 +4,9 @@
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QPushButton>
+#include <dbasebutton.h>
+
+DWIDGET_USE_NAMESPACE
 
 class HomePage : public QWidget
 {
@@ -12,7 +15,7 @@ class HomePage : public QWidget
 public:
     HomePage(QWidget *parent = 0);
 
-    QPushButton *startButton;
+    DBaseButton *startButton;
 
 private:
     QVBoxLayout *layout;

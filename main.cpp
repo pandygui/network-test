@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.setWindowTitle("网速测试");
     w.setFixedSize(500, 400);
+    w.setWindowIcon(QIcon(":/images/icon.svg"));
     w.show();
 
     return a.exec();

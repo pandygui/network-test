@@ -4,8 +4,11 @@ HomePage::HomePage(QWidget *parent)
     : QWidget(parent)
 {
     layout = new QVBoxLayout(this);
-    startButton = new QPushButton("立即测试");
+    startButton = new DBaseButton("立即测试");
 
-    layout->addWidget(startButton, Qt::AlignCenter);
+    startButton->setFixedHeight(50);
+    startButton->setFixedWidth(200);
+
+    layout->addWidget(startButton, 50, Qt::AlignCenter);
     layout->setMargin(50);
 }
