@@ -1,10 +1,13 @@
 #include "mainwindow.h"
-#include <QDebug>
+#include <dtitlebar.h>
+
+DWIDGET_USE_NAMESPACE
 
 MainWindow::MainWindow(QWidget *parent)
     : DMainWindow(parent)
 {
     mainWidget = new QWidget();
+    tabbar = new TabBar();
     layout = new QStackedLayout;
     homePage = new HomePage;
     loadPage = new LoadPage;
@@ -18,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     layout->addWidget(resultPage);
 
     mainWidget->setLayout(layout);
+    this->titleBar()->setCustomWidget(tabbar, Qt::AlignVCenter, false);
 
     connect(http, &QNetworkAccessManager::finished, this, &MainWindow::replyFinished);
     connect(timer, &QTimer::timeout, this, &MainWindow::timeOut);

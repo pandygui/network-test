@@ -10,6 +10,7 @@
 #include "homepage.h"
 #include "loadpage.h"
 #include "resultpage.h"
+#include "tabbar.h"
 
 DWIDGET_USE_NAMESPACE
 
@@ -23,6 +24,7 @@ public:
 
 private:
     QWidget *mainWidget;
+    TabBar *tabbar;
     QStackedLayout *layout;
     HomePage *homePage;
     LoadPage *loadPage;

@@ -21,9 +21,11 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     homepage.cpp \
     resultpage.cpp \
-    loadpage.cpp
+    loadpage.cpp \
+    tabbar.cpp
 
 HEADERS  += mainwindow.h \
     homepage.h \
     resultpage.h \
-    loadpage.h
+    loadpage.h \
+    tabbar.h
