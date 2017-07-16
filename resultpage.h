@@ -4,6 +4,9 @@
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QLabel>
+#include <dlinkbutton.h>
+
+DWIDGET_USE_NAMESPACE
 
 class ResultPage : public QWidget
 {
@@ -13,6 +16,7 @@ public:
     ResultPage(QWidget *parent = 0);
 
     QLabel *label;
+    DLinkButton *button;
 
 private:
     QVBoxLayout *layout;

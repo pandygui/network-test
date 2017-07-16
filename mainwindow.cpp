@@ -22,6 +22,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(http, &QNetworkAccessManager::finished, this, &MainWindow::replyFinished);
     connect(timer, &QTimer::timeout, this, &MainWindow::timeOut);
     connect(homePage->startButton, &QPushButton::clicked, this, &MainWindow::startTest);
+    connect(resultPage->button, &DLinkButton::clicked, this, [=]{
+        time = 0;
+        startTest();
+    });
 
     setCentralWidget(mainWidget);
 }
