@@ -17,5 +17,7 @@ int main(int argc, char *argv[])
     w.setWindowIcon(QIcon(":/images/icon.svg"));
     w.show();
 
+    DUtility::moveToCenter(&w);
+
     return a.exec();
 }
