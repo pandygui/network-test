@@ -1,0 +1,39 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <DMainWindow>
+#include <QStackedLayout>
+#include <QTimer>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include "homepage.h"
+#include "resultpage.h"
+
+DWIDGET_USE_NAMESPACE
+
+class MainWindow : public DMainWindow
+{
+    Q_OBJECT
+
+public:
+    MainWindow(QWidget *parent = 0);
+    ~MainWindow();
+
+private:
+    QWidget *mainWidget;
+    QStackedLayout *layout;
+    HomePage *homePage;
+    ResultPage *resultPage;
+    QTimer *timer;
+    QNetworkAccessManager *http;
+
+    void startTest();
+
+    void timeOut();
+    void replyFinished(QNetworkReply *);
+
+    double time;
+};
+
+#endif // MAINWINDOW_H
