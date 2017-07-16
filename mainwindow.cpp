@@ -51,7 +51,7 @@ void MainWindow::replyFinished(QNetworkReply *reply)
     QString temp = QString::number(times, 'f', 2);
     double result = temp.toDouble() / 1024;
 
-    resultPage->label->setText("下载速度：" + QString::number(result) + " KB/s");
+    resultPage->label->setText("下载速度：" + QString::number(result, 'f', 2) + " KB/s");
 
     layout->setCurrentIndex(1);
 }
