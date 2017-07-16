@@ -15,11 +15,15 @@ CONFIG += link_pkgconfig
 CONFIG += c++11
 PKGCONFIG += dtkwidget dtkbase dtkutil
 
+RESOURCES += images.qrc
+
 SOURCES += main.cpp\
         mainwindow.cpp \
     homepage.cpp \
-    resultpage.cpp
+    resultpage.cpp \
+    loadpage.cpp
 
 HEADERS  += mainwindow.h \
     homepage.h \
-    resultpage.h
+    resultpage.h \
+    loadpage.h

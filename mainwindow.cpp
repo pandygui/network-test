@@ -7,12 +7,14 @@ MainWindow::MainWindow(QWidget *parent)
     mainWidget = new QWidget();
     layout = new QStackedLayout;
     homePage = new HomePage;
+    loadPage = new LoadPage;
     resultPage = new ResultPage;
     timer = new QTimer(this);
     http = new QNetworkAccessManager(this);
     time = 0;
 
     layout->addWidget(homePage);
+    layout->addWidget(loadPage);
     layout->addWidget(resultPage);
 
     mainWidget->setLayout(layout);
@@ -36,6 +38,9 @@ void MainWindow::startTest()
     http->get(request);
 
     timer->start(10);
+
+    layout->setCurrentIndex(1);
+    loadPage->view->play();
 }
 
 void MainWindow::timeOut()
@@ -51,7 +56,7 @@ void MainWindow::replyFinished(QNetworkReply *reply)
     QString temp = QString::number(times, 'f', 2);
     double result = temp.toDouble() / 1024;
 
-    resultPage->label->setText("下载速度：" + QString::number(result, 'f', 2) + " KB/s");
+    resultPage->label->setText("测试结果：" + QString::number(result, 'f', 2) + " KB/s");
 
-    layout->setCurrentIndex(1);
+    layout->setCurrentIndex(2);
 }

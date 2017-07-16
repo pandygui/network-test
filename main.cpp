@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     a.setTheme("dark");
 
     MainWindow w;
+    w.setWindowTitle("网速测试");
     w.setFixedSize(500, 400);
     w.show();
 

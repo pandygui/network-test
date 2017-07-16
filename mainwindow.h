@@ -8,6 +8,7 @@
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include "homepage.h"
+#include "loadpage.h"
 #include "resultpage.h"
 
 DWIDGET_USE_NAMESPACE
@@ -24,6 +25,7 @@ private:
     QWidget *mainWidget;
     QStackedLayout *layout;
     HomePage *homePage;
+    LoadPage *loadPage;
     ResultPage *resultPage;
     QTimer *timer;
     QNetworkAccessManager *http;
