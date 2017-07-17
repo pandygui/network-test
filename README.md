@@ -20,6 +20,6 @@
 
 ## License
 
-rekols-express is licensed under [GPLv3](LICENSE).
+rekols-speed-test is licensed under [GPLv3](LICENSE).
 
 
