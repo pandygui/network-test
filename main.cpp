@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include <DApplication>
-#include <dutility.h>
+#include <DWidgetUtil>
 
 DWIDGET_USE_NAMESPACE
 
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     w.setWindowIcon(QIcon(":/images/icon.svg"));
     w.show();
 
-    DUtility::moveToCenter(&w);
+    Dtk::Widget::moveToCenter(&w);
 
     return a.exec();
 }

@@ -21,8 +21,8 @@ MainWindow::MainWindow(QWidget *parent)
     layout->addWidget(resultPage);
 
     mainWidget->setLayout(layout);
-    this->titleBar()->setCustomWidget(tabbar, Qt::AlignVCenter, false);
-    this->titleBar()->setWindowFlags(Qt::WindowTitleHint | Qt::WindowMinimizeButtonHint | Qt::WindowSystemMenuHint | Qt::WindowCloseButtonHint);
+    this->titlebar()->setCustomWidget(tabbar, Qt::AlignVCenter, false);
+    this->titlebar()->setWindowFlags(Qt::WindowTitleHint | Qt::WindowMinimizeButtonHint | Qt::WindowSystemMenuHint | Qt::WindowCloseButtonHint);
 
     connect(http, &QNetworkAccessManager::finished, this, &MainWindow::replyFinished);
     connect(timer, &QTimer::timeout, this, &MainWindow::timeOut);

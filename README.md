@@ -1,4 +1,4 @@
-## rekols-speed-test
+## Network Speed Test
 
 网速测试软件
 
@@ -6,7 +6,7 @@
 
 ### 编译依赖
 
-`sudo apt install g++ qt5-default libdtkbase-dev libdtkwidget-dev libdtkutil-dev`
+`sudo apt install g++ qt5-default libdtkcore-dev libdtkwidget-dev`
 
 ### 运行依赖
 
@@ -16,7 +16,7 @@
 
 * qt5core
 
-`sudo apt install libqt5core5a libqt5gui5 libqt5widgets5 libdtkbase libdtkwidget libdtkutil`
+`sudo apt install libqt5core5a libqt5gui5 libqt5widgets5 libdtkcore libdtkwidget`
 
 ## License
 
