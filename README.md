@@ -1,8 +1,6 @@
-## Network Speed Test
+## 网速测试软件
 
-网速测试软件
-
-计算原理：一张图片总大小 ÷ 加载一张图片所需的时间
+原理：一张图片总大小 ÷ 加载一张图片所需的时间
 
 ### 编译依赖
 
@@ -20,6 +18,9 @@
 
 ## License
 
-rekols-speed-test is licensed under [GPLv3](LICENSE).
+![](http://www.gnu.org/graphics/gplv3-127x51.png)
 
+Copyright © 2017 Rekols (Felix Bill)
+
+This project is licensed under version 3 of the GNU General Public License.
 
